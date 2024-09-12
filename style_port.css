@@ -1,0 +1,269 @@
+body {
+    position: relative;
+    background-image: url('fon3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #c5c3c3;
+}
+
+.header-text {
+    margin-bottom: 20px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes typingAndDeleting {
+    0% { width: 0; }
+    25% { width: 100%; }
+    50% { width: 100%; }
+    75% { width: 0; }
+    100% { width: 0; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffffff; }
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #ffffff;
+    font-family: monospace;
+    font-size: 40px;
+    animation: typingAndDeleting 4s steps(30, end) infinite, blink .75s step-end infinite;
+    text-shadow: 1px 1px 2px #000000, 0 0 5px #000000;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #f8f6f6;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+#skillsContainer {
+    perspective: 1000px;
+}
+
+#skillsContent {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#skcontent {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skcontent li {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000, 0 0 5px #000000;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+#skcontent img {
+    width: 75px;
+    height: auto;
+}
+
+#skcontent li:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+h2 {
+    font-family: fantasy;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000, 0 0 5px #000000;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #eeecf0, 0 0 40px #fcfcfc, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #1f1f1f;
+    font-family: fantasy;
+}
+
+.hidden {
+    display: none;
+}
+
+#skills {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+#skillsHeader {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000, 0 0 5px #000000;
+}
+
+#contact a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #000000;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: text-decoration 0.3s ease;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 80%;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    #skillsHeader {
+        font-size: 2em;
+    }
+
+    #skcontent li {
+        font-size: 1.2em;
+        margin: 5px;
+    }
+
+    #skcontent img {
+        width: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    #skillsHeader {
+        font-size: 1.5em;
+    }
+
+    #skcontent li {
+        font-size: 1em;
+        margin: 2px;
+    }
+
+    #skcontent img {
+        width: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
